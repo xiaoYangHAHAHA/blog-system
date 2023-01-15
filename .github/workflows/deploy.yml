@@ -23,16 +23,15 @@ jobs:
       - name: Build
         run: npm run build --if-present
         
-      - name: deploy to server
-        uses: garygrossgarten/github-action-scp@release
-        with:
-          local: nebula-website
-          remote: /home/vesoft/nebula-website
-          # 涉及偏安全隐私的信息，不要明文暴露在此文件中，因为repo很可能是公开的，会被所有人看见
-          # ${{ ... }} 会应用你在对应项目设置中，配置的对应serets的键值信息，从而保护私密信息不被看到
-          host: ${{ secrets.HOST }}
-          username: vesoft
-          password: ${{ secrets.PASSWORD }}
-          concurrency: 20
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          EXCLUDE: "/dist/, /node_modules/"
 
     
