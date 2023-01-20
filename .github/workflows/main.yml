@@ -1,0 +1,33 @@
+name: Blog CI/CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 切代码到 runner
+      - uses: actions/checkout@v2
+      - name: install Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build --if-present
+        
+      - name: copy file with scp 
+        uses: appleboy/scp-action@v0.0.1
+        with:
+           host: ${{ secrets.REMOTE_HOST }}
+           username: ${{ secrets.REMOTE_USER }}
+           password: ${{ secrets.REMOTE_PASSWORD }}
+           source: "docs/.vuepress/dist"
+           target: "/root/test"
