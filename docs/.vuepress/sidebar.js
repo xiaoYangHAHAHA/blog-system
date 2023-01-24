@@ -1,4 +1,5 @@
-const cssBar = require('./sidebarConfig/cssbar');
+const cssBar = require('./sidebarConfig/cssconfig');
+
 module.exports = {
   '/basics/': [
     {
