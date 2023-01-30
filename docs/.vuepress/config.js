@@ -1,5 +1,6 @@
 const sidebar = require('./sidebar');
 module.exports = {
+  base: '/',
   title: '小杨的进阶之路',
   description: ' ',
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
