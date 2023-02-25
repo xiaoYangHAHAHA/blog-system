@@ -1,5 +1,6 @@
 ---
 home: true
+heroText: ' '
 title: 你知道的越多，不知道的也就越多
 actionText: 一起学习 →
 actionLink: '/basic/'

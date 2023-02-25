@@ -11,10 +11,31 @@ module.exports = {
   themeConfig: {
     search: false,
     searchMaxSuggestions: 10,
-    nav: [{ text: '前端基础', link: '/basics/css/1.md' }],
+    nav: [{ text: '前端基础', link: '/basic/' }],
     sidebarDepth: 4,
     sidebar: {
       ...baseSlideBar()
     }
   }
+  // plugins: [
+  //   (options, ctx) => {
+  //     return {
+  //       name: 'archive',
+  //       async additionalPages() {
+  //         return [
+  //           {
+  //             path: '/',
+  //             frontmatter: {
+  //               home: true,
+  //               heroText: '你知道的越多，不知道的也就越多',
+  //               actionText: '一起学习  →',
+  //               actionLink: '/basic/',
+  //               footer: '暮从碧山下，山月随人归。却顾所来径，苍苍横翠微。'
+  //             }
+  //           }
+  //         ]
+  //       }
+  //     }
+  //   }
+  // ]
 }
