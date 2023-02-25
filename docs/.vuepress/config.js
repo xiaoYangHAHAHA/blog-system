@@ -1,4 +1,5 @@
-const sidebar = require('./sidebar');
+// const sidebar = require('./sidebar');
+const { _generateSidebar: baseSlideBar } = require('../data/base')
 module.exports = {
   base: '/blog/',
   title: '小杨的进阶之路',
@@ -12,6 +13,8 @@ module.exports = {
     searchMaxSuggestions: 10,
     nav: [{ text: '前端基础', link: '/basics/css/1.md' }],
     sidebarDepth: 4,
-    sidebar
+    sidebar: {
+      ...baseSlideBar()
+    }
   }
-};
+}
