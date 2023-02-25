@@ -12,7 +12,7 @@ const sliderBar = [
         number: 7
       },
       {
-        title: 'cssvariable解决了什么问题',
+        title: 'css variable解决了什么问题',
         number: 9
       },
       {
@@ -46,7 +46,7 @@ function _generateSidebar() {
     item.title = `${i++}. ${item.title}`
   }
   return {
-    '/base/': [...sliderBar]
+    '/basic/': [...sliderBar]
   }
 }
 
