@@ -38,15 +38,25 @@ const sliderBar = [
     ]
   },
   {
-    title: 'html',
+    title: 'javascript',
     collapsable: false,
     children: [
       {
-        title: '如何实现水平垂直居中',
-        number: 5
+        title: 'es6',
+        number: 2
       }
     ]
   }
+  // {
+  //   title: 'html',
+  //   collapsable: false,
+  //   children: [
+  //     {
+  //       title: '如何实现水平垂直居中',
+  //       number: 5
+  //     }
+  //   ]
+  // }
 ]
 
 function getItems() {
