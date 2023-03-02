@@ -4,6 +4,14 @@ const sliderBar = [
     collapsable: false,
     children: [
       {
+        title: 'css权重',
+        number: 1
+      },
+      {
+        title: 'BFC',
+        number: 15
+      },
+      {
         title: '如何实现水平垂直居中',
         number: 5
       },
@@ -18,6 +26,14 @@ const sliderBar = [
       {
         title: '伪类和伪元素有什么区别',
         number: 11
+      },
+      {
+        title: '单行、多行溢出省略号',
+        number: 13
+      },
+      {
+        title: '隐藏元素的方式及区别',
+        number: 3
       }
     ]
   },

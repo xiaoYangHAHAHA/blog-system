@@ -1,4 +1,3 @@
-// const sidebar = require('./sidebar');
 const { _generateSidebar: baseSlideBar } = require('../data/base')
 module.exports = {
   base: '/blog/',
@@ -12,7 +11,7 @@ module.exports = {
     search: false,
     searchMaxSuggestions: 10,
     nav: [{ text: '前端基础', link: '/basic/' }],
-    sidebarDepth: 4,
+    sidebarDepth: 2,
     sidebar: {
       ...baseSlideBar()
     }
