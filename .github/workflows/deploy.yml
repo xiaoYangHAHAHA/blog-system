@@ -22,11 +22,18 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
-      - name: copy file with scp
-        uses: appleboy/scp-action@v0.0.7
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          password: ${{ secrets.REMOTE_PASSWORD }}
-          source: 'docs/'
-          target: ${{ secrets.REMOTE_TARGET }}
+      - name: cd directory
+        run: cd -
+        run: cd /docs/.vuepress/dist
+
+
+
+
+      # - name: copy file with scp
+      #   uses: appleboy/scp-action@v0.0.7
+      #   with:
+      #     host: ${{ secrets.REMOTE_HOST }}
+      #     username: ${{ secrets.REMOTE_USER }}
+      #     password: ${{ secrets.REMOTE_PASSWORD }}
+      #     source: 'docs/'
+      #     target: ${{ secrets.REMOTE_TARGET }}
