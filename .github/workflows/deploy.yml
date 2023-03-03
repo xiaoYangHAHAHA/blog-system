@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - develop
 
 jobs:
   build:
@@ -29,5 +28,5 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           password: ${{ secrets.REMOTE_PASSWORD }}
-          source: '.vuepress/dist'
+          source: 'docs/'
           target: ${{ secrets.REMOTE_TARGET }}
