@@ -23,9 +23,8 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
-      - name: cd directory
-        run: cd /docs/.vuepress/dist
-
+      # - name: cd directory
+      #   run: cd /docs/.vuepress/dist
 
       - name: copy file with scp
         uses: appleboy/scp-action@v0.0.7
